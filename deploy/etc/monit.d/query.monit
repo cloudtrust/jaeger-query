@@ -1,0 +1,4 @@
+check process query matching "query"
+  start program = "/usr/bin/systemctl start query.service"
+  stop program = "/usr/bin/systemctl stop query.service"
+  if failed host 127.0.0.1 port 16687 then restart

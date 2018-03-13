@@ -1,0 +1,12 @@
+[Unit]
+Description=Jaeger tracing query and UI
+After=network.target
+
+[Service]
+Type=simple
+User=query
+Group=query
+ExecStart=/opt/query/query --config-file /etc/query/query.yml
+
+[Install]
+WantedBy=multi-user.target
