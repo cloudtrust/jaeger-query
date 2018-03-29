@@ -6,6 +6,7 @@ After=network.target
 Type=simple
 User=query
 Group=query
+Environment=SPAN_STORAGE_TYPE="elasticsearch"
 ExecStart=/opt/query/query --config-file /etc/query/query.yml
 
 [Install]
