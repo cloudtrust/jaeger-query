@@ -19,10 +19,10 @@ An example run command should look like
 docker run --rm -it --net=ct_bridge --tmpfs /tmp --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro --name jaeger-query -p 16686:80 cloudtrust-jaeger-query
 ```
 
-Note that the storage backend must be available and correctly configured, otherwise the Jaeger UI won't work. See the cloudtrust [elasticsearch-data-service](https://github.com/cloudtrust/elasticsearch-data-service) repository for more information on the storage.
-
+Note that the storage backend must be available and correctly configured, otherwise the Jaeger UI won't work. We use the Cloudtrust [elasticsearch-service](https://github.com/cloudtrust/elasticsearch-service) for the storage.
 
 ## Configuration
-The JSON `deploy/etc/jaeger-query/ui-config` (See [configuration](https://github.com/cloudtrust/dev-config) repo) allows you to configure multiple aspects of the UI, like the top menu (see [documentation](https://jaeger.readthedocs.io/en/latest/deployment/)).
+
+The JSON `deploy/etc/jaeger-query/ui-config` (See [configuration](https://github.com/cloudtrust/dev-config) repo) allows you to configure multiple aspects of the UI, like the top menu (see [documentation](https://jaegertracing.netlify.com/docs/)).
 
 The remaining part of the Jaeger query and Jaeger UI is configured in the file `deploy/etc/jaeger-query/query.yml`.
